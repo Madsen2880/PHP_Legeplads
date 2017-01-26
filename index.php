@@ -49,7 +49,13 @@ if ($page === 'home') {
     mysqli_stmt_bind_param($stmt, 's', $page);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_bind_result($stmt, $id, $title, $content);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
 }
+
+    mysqli_close($conn);
+
+    require './pages/pageView.php';
 
 
 
