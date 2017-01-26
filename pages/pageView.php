@@ -8,6 +8,13 @@
     <title><?=$title;?></title>
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="<?=strtok($_SERVER['REQUEST_URI'], '?');?>">Forside</a></li>
+        <li><a href="?page=Cheesecake">Cheesecake</a></li>
+        <li><a href="?page=Feta">Feta</a></li>
+    </ul>
+</nav>
     <h1><?=$title;?></h1>
     <?=$content;?>
 
